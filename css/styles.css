@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bruno+Ace&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --index: calc(1vw + 1vh);
+    --color-header: #f1f1f1;
+    --color-text: #dfcece;
+    --gallery-gap: calc(var(--index) * 6);
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: 'Bruno Ace', cursive;
+}
+
+/* WILL CHANGE */
+.content, .hero-section__img, .main-header, .gallery > *{
+    will-change: transform;
+}
+
+body{
+    background-color: #050505;
+    background-size: 50px;
+    color: #f7f7f7;
+    font-family: 'Epilogue', sans-serif;
+    overflow-x: hidden;
+}
+
+.hero-section__img{
+    width: calc(var(--index) * 30);
+    position: absolute;
+    left: 40vw;
+    top: 10vh;
+    z-index: -1;
+}
+
+.main-header{
+    height: 100vh;
+}
+
+.container{
+    padding: 0 12vw;
+
+}
+
+.main-title{
+    font-size: calc(var(--index) * 6);
+    position: absolute;
+    width: min-content;
+    bottom: 10vh;
+    line-height: .9;
+    color: #e8f536;
+}
+
+.gallery{
+    display: flex;
+    padding: calc(var(--index) * 10) 0;
+}
+.gallery > * {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    
+}
+
+.gallery-item{
+    max-width: calc(var(--index) * 20);
+    max-height: 50vh;
+    min-height: 50vh;
+    margin-bottom: var(--gallery-gap);
+}
+
+.text-block{
+    font-size: 1.8rem;
+}
+.text-block__h{
+    color:#e9e9e9;
+    margin-bottom: 1.5rem;
+}
+.text-block_p{
+    color: #a8a6a6;
+}
+
+.gallery__left .gallery-item{
+    margin-top: calc(var(--gallery-gap) * 2);
+}
+
+.gallery__left .text-block {
+    margin-top: var(--gallery-gap);
+}
+
+.gallery__left{
+    margin-top: calc(var(--gallery-gap) * 1.5);
+}
+.gallery__right {
+    margin-top: calc(var(--gallery-gap) * -2.2);
+}
+
+.mercury-txt{
+    margin-top: calc(var(--gallery-gap) * 0.3);
+    margin-bottom: calc(var(--gallery-gap) * 3.1);
+}
+.mercury-img{
+    margin-bottom: calc(var(--gallery-gap) * 1.1);
+}
+
+.venus-img{
+    margin-top: calc(var(--gallery-gap) * -1);
+}
+.venus-txt{
+    margin-bottom: calc(var(--gallery-gap) * -1);;
+}
+
+.earth-img{
+    margin-top: calc(var(--gallery-gap) * -3);
+}
+.earth-txt{
+    margin-top: calc(var(--gallery-gap) * 2.2);
+    margin-bottom: calc(var(--gallery-gap) * 2.2);
+}
+.mars-img{
+    max-width: calc(var(--index) * 20);
+    max-height: calc(var(--index) * 20);
+    margin-bottom: calc(var(--gallery-gap) * 4);
+}
+.mars-txt{
+    margin-bottom: calc(var(--gallery-gap) * -0.2);
+}
+.jupiter-img{
+    margin-bottom: calc(var(--gallery-gap) * 2);
+}
+.jupiter-txt{
+    margin-bottom: calc(var(--gallery-gap) * 4.2);
+}
+
+.saturn-img{
+    max-width: calc(var(--index) * 35);
+    margin-top: calc(var(--gallery-gap) * -0.75);
+    margin-bottom: calc(var(--gallery-gap) -3.3);
+}
+.saturn-txt{
+    margin-bottom: calc(var(--gallery-gap) -3);
+}
+
+.uranus-txt{
+    margin-top: calc(var(--gallery-gap) * 6);
+    margin-bottom: calc(var(--gallery-gap) * 5.5);
+}
+
+.uranus-img{
+    margin-top: calc(var(--gallery-gap) * -3.75);
+    margin-bottom: calc(var(--gallery-gap) * 3.5);
+}
+
+
+
+
+
+
+
+
