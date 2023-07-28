@@ -1,2 +1,2 @@
 # AstroSpase
-scroll planets animation | GSAP ScrollTrigger Scroll Smother
+Scroll solar system's planets animation | GSAP ScrollTrigger ScrollSmother
