@@ -32,9 +32,9 @@ body{
 }
 
 .hero-section__img{
-    width: calc(var(--index) * 30);
+    width: calc(var(--index) * 28);
     position: absolute;
-    left: 40vw;
+    left: 45vw;
     top: 10vh;
     z-index: -1;
 }
@@ -49,7 +49,7 @@ body{
 }
 
 .main-title{
-    font-size: calc(var(--index) * 6);
+    font-size: calc(var(--index) * 5);
     position: absolute;
     width: min-content;
     bottom: 10vh;
