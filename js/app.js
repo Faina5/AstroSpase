@@ -35,13 +35,13 @@ if(ScrollTrigger.isTouch !==1){
     let itemsR = gsap.utils.toArray('.gallery__right .image')
 
     itemsR.forEach(item => {
-        gsap.fromTo(item, {x: -800, opacity: 0}, {
+        gsap.fromTo(item, {x: -1000, opacity: 0}, {
             opacity: 1, x: 0,
             scrollTrigger: {
             trigger: item,
             scrub: true,
-            start: '-1000',
-            end: '-500',
+            start: '-800',
+            end: '-10',
             }
         })
     })
@@ -55,7 +55,7 @@ if(ScrollTrigger.isTouch !==1){
             trigger: item,
             scrub: true,
             start: '-800',
-            end: '-500'
+            end: '-10'
             }
         })
     })
