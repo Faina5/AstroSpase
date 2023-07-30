@@ -211,8 +211,12 @@ body{
     .gallery__right .text-block {
         margin-right: 0;
     }
+}
+
+@media (max-width: 500px){
     .hero-section__img{
-        margin: 0;    
+        left: 10vw;    
     }
+}
 
 
