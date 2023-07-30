@@ -52,7 +52,7 @@ body{
 }
 
 .wrapper{
-    min-height: calc(100vh - calc(var(--gallery-gap)*0.2));
+    min-height: calc(100vh - calc(var(--gallery-gap)*0.05));
     display: flex;
     flex-direction: column;
 }
@@ -98,7 +98,7 @@ body{
     background-color:#000000;
     padding: 0.625rem 0;
     color:#D9D9D9;
-    height: calc(var(--gallery-gap)*0.01);
+    height: calc(var(--gallery-gap)*0.05);
 }
 
 .footer__copy{
