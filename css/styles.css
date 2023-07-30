@@ -211,6 +211,8 @@ body{
     .gallery__right .text-block {
         margin-right: 0;
     }
-}
+    .hero-section__img{
+        margin: 0;    
+    }
 
 
