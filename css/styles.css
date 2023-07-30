@@ -20,16 +20,18 @@ h1{
     margin: 0;
 }
 
+h1, h2, h3, h4, h5, h6{
+    font-family: 'Bruno Ace', cursive;
+}
+
 :root {
     --index: calc(1vw + 1vh);
     --color-header: #f1f1f1;
     --color-text: #dfcece;
-    --gallery-gap: calc(var(--index) * 6);
+    --gallery-gap: calc(var(--index) * 20);
 }
 
-h1, h2, h3, h4, h5, h6{
-    font-family: 'Bruno Ace', cursive;
-}
+
 
 /* WILL CHANGE */
 .content, .hero-section__img, .main-header, .gallery > *{
@@ -57,12 +59,10 @@ body{
 
 .header{
     background-color: #000000;
-    position: sticky;
-    top: -1em;
-    z-index: 1;
 }
 
 .container{
+    max-width: 90%;
     padding: 0 12vw;
 }
 
@@ -132,7 +132,7 @@ body{
 
 .gallery{
     display: flex;
-    padding: calc(var(--index) * 10) 0;
+    padding: calc(var(--index) * 30) 0;
 }
 .gallery > * {
     flex: 1;
@@ -143,90 +143,74 @@ body{
 }
 
 .gallery-item{
-    max-height: 50vh;
-    min-height: 50vh;
     margin-bottom: var(--gallery-gap);
+}
+
+ .gallery__right .gallery-item{
+    margin-bottom: calc(var(--gallery-gap) );
+    margin-left: calc(var(--gallery-gap) * 0.2);
 }
 
 .text-block{
     font-size: 1.5rem;
 }
 .text-block__h{
-    color:#e9e9e9;
+    color:#f0f0f0;
     margin-bottom: 1.5rem;
 }
 .text-block_p{
-    color: #a8a6a6;
+    color: #d1cfcf;
 }
 
-.gallery__left .gallery-item{
-    margin-top: calc(var(--gallery-gap) * 2);
-}
-
-.gallery__left .text-block {
-    margin-top: var(--gallery-gap);
+.gallery__right .text-block {
+    margin-right: calc(var(--gallery-gap) * 0.4);
 }
 
 .gallery__right {
-    margin-top: calc(var(--gallery-gap) * 2.8);
+    margin-top: calc(var(--gallery-gap) * 0.3);
 }
 
 .image{
+    width: calc(var(--index) * 20);
     aspect-ratio: 1;
 }
 
-.mercury-txt{
-    margin-bottom: calc(var(--gallery-gap) * 1.1);
-}
-.mercury-img{
-    margin-bottom: calc(var(--gallery-gap) * 1.1);
-}
-
 .venus-img{
-    margin-bottom: calc(var(--gallery-gap) * 2.5);
-}
-.venus-txt{
-    margin-bottom: calc(var(--gallery-gap) * -0.2);
-}
-
-.earth-txt{
-    margin-bottom: calc(var(--gallery-gap) * 1);
+    margin-top:calc(var(--gallery-gap) * 0.13) ;
 }
 
 .mars-img{
-    max-width: calc(var(--index) * 20);
-    margin-bottom: calc(var(--gallery-gap) * 2.7);
+    width: calc(var(--index) * 25);
+    margin-top:calc(var(--gallery-gap) * -0.2) ;
 }
-.mars-txt{
-    margin-bottom: calc(var(--gallery-gap) * -0.5);
-}
-.jupiter-img{
-    margin-bottom: calc(var(--gallery-gap) * 2);
-}
-.jupiter-txt{
-    margin-bottom: calc(var(--gallery-gap) * 1.8);
-}
+
 
 .saturn-img{
-    margin-bottom: calc(var(--gallery-gap) * 2);
+    margin-top: calc(var(--gallery-gap) * 0.15);
     aspect-ratio: 2/1;
-}
-.saturn-txt{
-    margin-bottom: calc(var(--gallery-gap) * -1);
+    width: calc(var(--index) * 30);
 }
 
-.uranus-txt{
-    margin-bottom: calc(var(--gallery-gap) * 2);
+.neptun-img{
+    margin-top: calc(var(--gallery-gap) * 0.15);
 }
 
-.uranus-img{
-    margin-bottom: calc(var(--gallery-gap) * 2);
+@media (max-width: 1330px) {
+    .gallery{
+        display: flex;
+        justify-content: flex-start;
+
+    }
+    .image{
+        width: calc(var(--index) * 12);
+    }
+    .text-block{
+        font-size: 1rem;
+    }
+
+    .gallery__right .text-block {
+        margin-right: 0;
+    }
 }
-
-
-
-
-
-
 
 
