@@ -62,8 +62,8 @@ body{
 }
 
 .container{
-    max-width: 90%;
-    padding: 0 12vw;
+    max-width: 1200px;
+    padding: 0 6vw;
 }
 
 .header-inner{
@@ -92,7 +92,14 @@ body{
 
 .main{
    flex-grow: 1;
+   display: flex;
+   justify-content: center;
+   align-items: end;
 }
+.main__container {
+    margin: 0 auto;
+    
+  }
 
 .footer{
     background-color:#000000;
@@ -108,6 +115,111 @@ body{
     font-size:small;
 }
 
+
+.rotate-earth{
+    display: flex;
+    margin: var(--gallery-gap);
+}
+.sun-move{
+    position: absolute;
+    top: 15em;
+    left: 15em;
+    width: 10em;
+    height: 10em;
+    background-color: yellow;
+    border-radius: 50%;
+    box-shadow: 0 0 3em white;
+}
+.earth-move, .moon-move{
+    position: absolute;
+    border-style: solid;
+    border-color: white transparent transparent transparent;
+    border-width: 0.1em 0.1em 0 0;
+    border-radius: 50%;
+}
+.earth-move{
+    top: 5em;
+    left: 5em;
+    width: 30em;
+    height: 30em;
+    animation: orbit 36.5s linear infinite;
+}
+.moon-move{
+    top: 0;
+    right: 0;
+    width: 8em;
+    height: 8em;
+    animation: orbit 2.7s linear infinite;
+}
+
+.earth-move::before, .moon-move::before{
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+}
+
+.earth-move::before{
+    top: 2.8em;
+    right: 2.8em;
+    width: 3em;
+    height: 3em;
+    background-color: aqua;
+}
+.moon-move::before{
+    top: 0.8em;
+    right: 0.2em;
+    width: 1.2em;
+    height: 1.2em;
+    background-color: silver;
+}
+
+@keyframes orbit {
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+
+.gallery-planets{
+    display: flex;
+    justify-content: flex-start;
+    align-items: end;
+    flex-direction: row;
+    column-gap: 1em;
+    overflow-x: auto ;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+}
+.gallery-planets::-webkit-scrollbar-track
+{
+    background: rgba(128, 128, 128, 0.1);
+}
+
+.gallery-planets::-webkit-scrollbar
+{
+    width: 10px;
+    height: 10px;
+}
+
+.gallery-planets::-webkit-scrollbar-thumb
+{
+    background-color: rgba(251, 255, 0, 0.75);
+    border-radius: 2px;
+    border: 1px solid rgba(128, 128, 128, 0.1);
+}
+
+.gallery-planets_item{
+    scroll-snap-align: center;
+    
+}
+
+.gallery-planets__image{
+    width:15rem;
+    height: 15rem;
+    min-width: 100%;
+    padding: 1rem;
+    object-fit: cover;
+}
 
 .hero-section__img{
     width: calc(var(--index) * 28);
@@ -210,12 +322,6 @@ body{
 
     .gallery__right .text-block {
         margin-right: 0;
-    }
-}
-
-@media (max-width: 500px){
-    .hero-section__img{
-        left: 10vw;    
     }
 }
 
