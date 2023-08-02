@@ -61,9 +61,8 @@ body{
     background-color: #000000;
 }
 
+
 .container{
-    max-width: 90%;
-    margin: 0 auto;
     padding: 0 6vw;
 }
 
@@ -99,14 +98,14 @@ body{
 }
 .main__container {
     margin: 0 auto;
-    
+    max-width: 1200px;  
   }
 
 .footer{
     background-color:#000000;
     padding: 0.625rem 0;
     color:#D9D9D9;
-    height: calc(var(--gallery-gap)*0.05);
+    height: calc(var(--gallery-gap)*0.1);
 }
 
 .footer__copy{
@@ -119,7 +118,9 @@ body{
 
 .rotate-earth{
     display: flex;
-    margin: var(--gallery-gap);
+    justify-content: space-around;
+    margin: calc(var(--gallery-gap) * 0.7);
+    
 }
 .sun-move{
     position: absolute;
