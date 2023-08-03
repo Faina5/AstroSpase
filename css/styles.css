@@ -62,7 +62,7 @@ body{
 }
 
 
-.container{
+.container-p{
     padding: 0 6vw;
 }
 
@@ -96,7 +96,7 @@ body{
    justify-content: center;
    align-items: end;
 }
-.main__container {
+.container {
     margin: 0 auto;
     max-width: 1200px;  
   }
@@ -118,9 +118,7 @@ body{
 
 .rotate-earth{
     display: flex;
-    justify-content: space-around;
-    margin: calc(var(--gallery-gap) * 0.7);
-    
+    margin: calc(var(--gallery-gap) * 0.7);    
 }
 .sun-move{
     position: absolute;
@@ -185,12 +183,12 @@ body{
 .gallery-planets{
     display: flex;
     justify-content: flex-start;
-    align-items: end;
     flex-direction: row;
     column-gap: 1em;
     overflow-x: auto ;
     overflow-y: hidden;
     scroll-snap-type: x mandatory;
+    width: calc(var(--index) * 40);
 }
 .gallery-planets::-webkit-scrollbar-track
 {
@@ -215,13 +213,14 @@ body{
     
 }
 
+
 .gallery-planets__image{
-    width:15rem;
+    min-width:15rem;
     height: 15rem;
-    min-width: 100%;
     padding: 1rem;
     object-fit: cover;
 }
+
 
 .hero-section__img{
     width: calc(var(--index) * 28);
@@ -325,6 +324,11 @@ body{
     .gallery__right .text-block {
         margin-right: 0;
     }
+
 }
 
-
+@media (max-width: 1222px) {
+    .gallery-planets{
+        max-width: 90%;
+    }
+}
