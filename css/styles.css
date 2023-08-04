@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bruno+Ace&display=swap');
 
+
+
 * {
     margin: 0;
     padding: 0;
@@ -33,6 +35,7 @@ h1, h2, h3, h4, h5, h6{
 
 
 
+
 /* WILL CHANGE */
 .content, .hero-section__img, .main-header, .gallery > *{
     will-change: transform;
@@ -52,18 +55,20 @@ body{
 }
 
 
+
 .wrapper{
     min-height: calc(100vh - calc(var(--gallery-gap)*0.05));
     display: flex;
     flex-direction: column;
 }
 
-.header{
-    background-color: #000000;
-}
+
 
 .container {
-    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     max-width: 1200px;  
   }
 .container-p{
@@ -83,7 +88,7 @@ body{
 
 .menu__list-item{
     color: #D9D9D9;
-    font-size: var(--index);
+    font-size: 1rem;
     font-weight: bold;
     cursor: pointer;
 }
@@ -101,7 +106,7 @@ body{
    flex-grow: 1;
    display: flex;
    justify-content: center;
-   align-items:last baseline;
+   align-items: center;
 }
 
 
@@ -110,18 +115,21 @@ body{
     padding: 0.625rem 0;
     color:#D9D9D9;
     height: calc(var(--gallery-gap)*0.1);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
 }
 
 .footer__copy{
-    display: flex;
-    justify-content: flex-end;
+    padding: 1rem;
+    margin-top: 1rem;
     margin-right: 1.875rem;
-    font-size:small;
+    font-size: 0.7rem;
 }
 
 .rotate-earth{
         display: flex;
-        margin: calc(var(--gallery-gap) * 0.7);    
+        margin: calc(var(--gallery-gap) * 0.5);    
     }
 
 .sun-move{
@@ -177,10 +185,20 @@ body{
     background-color: silver;
 }
 
+
+
 @keyframes orbit {
     to{
         transform: rotate(360deg);
     }
+}
+
+
+
+fieldset {
+    border: 1px solid #fffab7;
+    padding: var(--index);
+    margin: 0 4rem;
 }
 
 .planets-title{
@@ -188,6 +206,7 @@ body{
     justify-content: center;
     align-items: center;
     font-size: var(--index);
+    font-weight:900;
     padding: 4rem 0;
 }
 .gallery-planets{
@@ -198,7 +217,7 @@ body{
     overflow-x: auto ;
     overflow-y: hidden;
     scroll-snap-type: x mandatory;
-    width: calc(var(--index) * 40);
+    width: calc(var(--index) * 28);
 }
 
 
@@ -206,33 +225,34 @@ body{
     display: flex;
     justify-content: center;align-items: center;
     flex-direction: column;
-    font-size: var(--index);
+    font-size: calc(var(--index) * 0.6);
+    font-weight:900;
     padding: 1rem 0;
 }
 
-.gallery-planets::-webkit-scrollbar-track
-{
-    background: rgba(128, 128, 128, 0.1);
+.gallery-planets::-webkit-scrollbar-track {
+    background: rgba(207, 207, 207, 0.24);
+    border-radius: 50px;
 }
 
-.gallery-planets::-webkit-scrollbar
-{
-    width: 10px;
-    height: 10px;
+.gallery-planets::-webkit-scrollbar {
+    height: 20px;
 }
 
-.gallery-planets::-webkit-scrollbar-thumb
-{
-    background-color: rgba(251, 255, 0, 0.75);
-    border-radius: 2px;
-    border: 1px solid rgba(128, 128, 128, 0.1);
+.gallery-planets::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 238, 0, 0.897);
+    border-radius: 50px;
+    border: 1px solid rgba(255, 238, 0, 0.575);
 }
+.gallery-planets::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(255, 238, 0, 0.575);
+}
+
 
 .gallery-planets_item{
     scroll-snap-align: center;
     
 }
-
 
 .gallery-planets__image{
     min-width:15rem;
@@ -240,7 +260,6 @@ body{
     padding: 1rem;
     object-fit: cover;
 }
-
 
 .hero-section__img{
     width: calc(var(--index) * 28);
@@ -327,6 +346,9 @@ body{
 .neptun-img{
     margin-top: calc(var(--gallery-gap) * 0.15);
 }
+
+
+
 
 @media (max-width: 1330px) {
     .gallery{
