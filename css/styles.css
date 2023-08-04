@@ -198,7 +198,7 @@ body{
 fieldset {
     border: 1px solid #fffab7;
     padding: var(--index);
-    margin: 0 4rem;
+    margin: 4rem;
 }
 
 .planets-title{
