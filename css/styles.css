@@ -94,7 +94,7 @@ body{
 }
 
 .menu__list-link_here{
-  color:hwb(56 0% 0%);
+  color:yellow;
   cursor: default;
 }
 .menu__list-item :hover{
@@ -223,7 +223,7 @@ body{
 
 .rotate-earth{
         display: flex;
-        margin: calc(var(--gallery-gap) * 0.5);    
+        margin: calc(var(--gallery-gap) * 0.2);  
     }
 
 .sun-move{
@@ -290,7 +290,7 @@ body{
 .index-SolarSysrem{
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
     flex-direction: column;
 }
 fieldset {
@@ -339,14 +339,14 @@ fieldset {
 }
 
 .gallery-planets::-webkit-scrollbar-thumb {
-    background-color: rgba(255, 238, 0, 0.897);
+    background-color: yellow;
     border-radius: 50px;
 }
 .gallery-planets::-webkit-scrollbar-thumb:hover {
     background-color: rgba(255, 238, 0, 0.575);
 }
 .gallery-planets::-webkit-scrollbar-thumb:active {
-    background-color: rgb(251, 255, 0);
+    background-color: yellow;
 }
 
 
@@ -375,9 +375,39 @@ fieldset {
 }
 .moon__img{
     width: 40rem;
-
 }
+.moon-title{
 
+    overflow: hidden;
+}
+.moon-title .text{
+    position: relative;
+    color: yellow;
+    font-size: 1.7rem;
+    font-weight: 400;
+}
+.moon-title .text.first-text{
+    color: #FFF;
+}
+.text.sec-text:before{
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #000000;
+    border-left: 2px solid yellow;
+    animation: animate 4s steps(12) infinite;
+}
+@keyframes animate{
+    40%, 60%{
+        left: calc(100% + 4px);
+    }
+    100%{
+        left: 0%;
+    }
+}
 
 
 
@@ -506,6 +536,9 @@ fieldset {
 @media (max-width: 767px) {
     .move{
         display: none;
+    }
+    .index-SolarSysrem{
+        align-items: center;
     }
     .gallery-planets{
         max-width: 70%;

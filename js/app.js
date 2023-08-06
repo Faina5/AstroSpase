@@ -60,3 +60,15 @@ if(ScrollTrigger.isTouch !==1){
         })
     })
     }
+
+
+
+const text = document.querySelector(".sec-text");
+const textLoad = () => {
+    setTimeout( () => {
+        text.textContent = "Earth's Moon";
+    }, 0);
+
+}
+textLoad();
+setInterval(textLoad, 4000);
