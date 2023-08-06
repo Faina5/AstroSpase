@@ -114,7 +114,8 @@ body{
     background-color:#000000;
     padding: 0.625rem 0;
     color:#D9D9D9;
-    height: calc(var(--gallery-gap)*0.1);
+    height: 10vh;
+    width: 100%;
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -122,10 +123,103 @@ body{
 
 .footer__copy{
     padding: 1rem;
-    margin-top: 1rem;
-    margin-right: 1.875rem;
     font-size: 0.7rem;
 }
+
+.stars{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.stars span{
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    position: absolute;
+    display: block;
+    background: #fff;
+}
+
+.stars span:nth-child(1) {
+    left: 700px;
+    animation: speed 12s infinite linear;
+}
+.stars span:nth-child(2) {
+    left: 500px;
+    animation: speed 16s infinite linear;
+}
+.stars span:nth-child(3) {
+    left: 200px;
+    animation: speed 20s infinite linear;
+}
+.stars span:nth-child(4) {
+    left: 400px;
+    animation: speed 15s infinite linear;
+}
+.stars span:nth-child(5) {
+    left: 100px;
+    animation: speed 13s infinite linear;
+}
+.stars span:nth-child(6) {
+    left: 950px;
+    animation: speed 22s infinite linear;
+}
+.stars span:nth-child(7) {
+    left: 250px;
+    animation: speed 21s infinite linear;
+}
+.stars span:nth-child(8) {
+    left: 550px;
+    animation: speed 19s infinite linear;
+}
+.stars span:nth-child(9) {
+    left: 750px;
+    animation: speed 24s infinite linear;
+}
+.stars span:nth-child(10) {
+    left: 1100px;
+    animation: speed 19s infinite linear;
+}
+.stars span:nth-child(11) {
+    left: 1200px;
+    animation: speed 12s infinite linear;
+}
+.stars span:nth-child(12) {
+    left: 600px;
+    animation: speed 17s infinite linear;
+}
+
+@keyframes speed {
+    0%{
+        opacity: 0;
+        bottom: -10%;
+        transform: translateY(20px);
+    }
+    10%{
+        opacity: 1;
+    }
+    20%{
+        transform: translateY(20px);
+    }
+    40%{
+        transform: translateY(20px);
+    }
+    60%{
+        transform: translateY(20px);
+    }
+    80%{
+        transform: translateY(20px);
+    }
+    100%{
+        bottom: 110%;
+        transform: translateY(20px);
+    }
+}
+
 
 .rotate-earth{
         display: flex;
@@ -193,12 +287,17 @@ body{
     }
 }
 
-
-
+.index-SolarSysrem{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
 fieldset {
     border: 1px solid #fffab7;
     padding: var(--index);
     margin: 4rem;
+    width: 50%;
 }
 
 .planets-title{
@@ -242,10 +341,12 @@ fieldset {
 .gallery-planets::-webkit-scrollbar-thumb {
     background-color: rgba(255, 238, 0, 0.897);
     border-radius: 50px;
-    border: 1px solid rgba(255, 238, 0, 0.575);
 }
 .gallery-planets::-webkit-scrollbar-thumb:hover {
     background-color: rgba(255, 238, 0, 0.575);
+}
+.gallery-planets::-webkit-scrollbar-thumb:active {
+    background-color: rgb(251, 255, 0);
 }
 
 
@@ -261,6 +362,26 @@ fieldset {
     object-fit: cover;
 }
 
+.moon-title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+.Moon{
+    font-size: 4rem;
+    font-weight: bold;
+    margin: 4rem;
+}
+.moon__img{
+    width: 40rem;
+
+}
+
+
+
+
+/* PLANETS.HTML */
 .hero-section__img{
     width: calc(var(--index) * 28);
     position: absolute;
