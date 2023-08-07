@@ -59,6 +59,20 @@ if(ScrollTrigger.isTouch !==1){
             }
         })
     })
+
+    let itemsM = gsap.utils.toArray('.about-moon__item')
+
+    itemsL.forEach(item => {
+        gsap.fromTo(item, {x: 25, opacity: 0}, {
+            opacity: 1, x: 0,
+            scrollTrigger: {
+            trigger: item,
+            scrub: true,
+            start: '-1000',
+            end: '-10'
+            }
+        })
+    })
     }
 
 
