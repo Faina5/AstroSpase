@@ -60,7 +60,7 @@ if(ScrollTrigger.isTouch !==1){
         })
     })
 
-    let itemsM = gsap.utils.toArray('.about-moon__item')
+    let itemsM = gsap.utils.toArray('.about-moon__item .about-moon__article')
 
     itemsL.forEach(item => {
         gsap.fromTo(item, {x: 25, opacity: 0}, {

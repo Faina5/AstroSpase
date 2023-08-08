@@ -62,7 +62,12 @@ body{
     flex-direction: column;
 }
 
-
+.header{
+    background-color: #7a7a7a1e;
+    position: sticky;
+    top: 0;
+    z-index: 3;
+}
 
 .container {
     display: flex;
@@ -79,7 +84,8 @@ body{
     display: flex;
     justify-content: center;
     align-items: start;
-    padding: var(--index);
+    padding: 1rem var(--index);
+    z-index: 3;
 }
 
 .menu__list{
@@ -87,7 +93,7 @@ body{
     gap: calc(var(--index) * 2);
 }
 .menu__list-link_here{
-    color:yellow;
+    color:yellow !important;
     cursor: default;
       
     }
@@ -104,7 +110,7 @@ body{
     font-weight: bold;
     border-radius: 30px;
     text-shadow: 2px 2px 3px rgb(136 0 136 / 50%);
-    background: linear-gradient(15deg, #d6d6d6, #b99a91, #ca9470, #deb93d, #f0dd33, #deb93d, #ce5200, #b42b01, #b9000f) no-repeat;
+    background: linear-gradient(15deg, #fff01e, #ffc919, #ffcf31, #ffcd2a, #f0dd33, #deb93d, #ce5200, #b42b01, #b9000f) no-repeat;
     background-size: 300%;
     color: #fff;
     border: none;
@@ -375,7 +381,7 @@ fieldset {
 
 .gallery-planets_item{
     scroll-snap-align: center;
-    
+    margin-bottom: 2rem;
 }
 
 .gallery-planets__image{
@@ -396,6 +402,31 @@ fieldset {
     font-weight: bold;
     margin: 4rem;
 }
+.click{
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    font-size: 3rem;
+    border: transparent;
+    color:#d1cfcf;
+    cursor: pointer;
+    border-radius: 1rem;
+    padding: 15px 30px;
+}
+
+button:hover {
+    background-image: linear-gradient(90deg, #fff01e 0%, #ce5200 50%, #b42b01 75%, #fff01e 100%);
+    animation: slidernbw 5s linear infinite;
+    color: #000;
+
+   }
+   
+   @keyframes slidernbw {
+    to {
+     background-position: 20vw;
+    }
+   }
+
 .moon__img{
     width: 40rem;
 }
@@ -536,9 +567,14 @@ fieldset {
     left: calc(var(--gallery-gap) * 0.2);
 }
 
+
+/* .about-moon{
+    display: flex;
+    flex-direction: row;
+} */
 .about-moon__title{
-    margin-top: calc(var(--gallery-gap) * 0.6) ;
-    margin-left: calc(var(--gallery-gap) * 0.6) ;
+    margin-top: calc(var(--gallery-gap) * 0.7) ;
+
 }
 .about-moon__list{
     display: grid;
@@ -549,6 +585,12 @@ fieldset {
     justify-items: center;
     height: 70rem;
     counter-reset: Moon;
+}
+.about-moon__name-title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 5rem;
 }
 
 .about-moon__item{
@@ -567,16 +609,38 @@ fieldset {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(255, 255, 0, 0.863);
+    background-color: rgb(255, 217, 0);
     width: 4rem;
     height: 4rem;
     border-radius: 50%;
-    color: #e4e4e4;
+    color: #161616;
     top: -6rem;
     font-size: 2rem;
   }
+  .about-moon__item h3{
+    margin-bottom: 1rem;
+  }
 
-
+  .about-moon__article{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    margin: calc(var(--index)*10) auto;
+    width: 80%;
+    font-size: 1.3rem;
+    line-height: 1.5;
+  }
+  .about-moon__article h3{
+    margin-top: 10rem;
+    margin-bottom: 1rem;
+  }
+  .about-moon__article-img img{
+    width: 40%;
+    float: left;
+    padding-right: 2rem;
+    
+  }
 
 
 @media (max-width: 1330px) {
@@ -611,10 +675,6 @@ fieldset {
 }
 
 @media (max-width: 1222px) {
-    .container{
-
-    }
-
     .gallery-planets{
         max-width: 100%;
     }
