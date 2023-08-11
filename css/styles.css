@@ -67,6 +67,7 @@ body{
     position: sticky;
     top: 0;
     z-index: 3;
+    justify-content: flex-start;
 }
 
 .container {
@@ -84,7 +85,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: start;
-    padding: 1rem var(--index);
+    padding: 1rem;
     z-index: 3;
 }
 
@@ -95,7 +96,8 @@ body{
 .menu__list-link_here{
     color:yellow !important;
     cursor: default;
-}
+      
+    }
 
 .menu__list-link{
     color: #D9D9D9;
@@ -108,22 +110,22 @@ body{
     gap: 0.4rem;
     font-weight: bold;
     border-radius: 30px;
-    text-shadow: 2px 2px 3px rgb(136 0 136 / 50%);
+    text-shadow: 2px 2px 3px rgba(156, 76, 0, 0.932);
     background: linear-gradient(15deg, #fff01e, #ffc919, #ffcf31, #ffcd2a, #f0dd33, #deb93d, #ce5200, #b42b01, #b9000f) no-repeat;
     background-size: 300%;
     color: #fff;
     border: none;
     background-position: left center;
-    box-shadow: 0 30px 10px -20px rgba(0,0,0,.2);
+    box-shadow: 0 30px 10px -20px rgba(255, 196, 0, 0.2);
     transition: background .3s ease;
 }
 
 
   
-.menu__list-link:hover{
+  .menu__list-link:hover{
     background-size: 320%;
     background-position: right center;
-}
+  }
 
 .menu__list-item :active{
     color: rgb(182, 148, 0);
@@ -252,7 +254,7 @@ body{
 .rotate-earth{
         display: flex;
         margin: calc(var(--gallery-gap) * 0.2);  
-}
+    }
 
 .sun-move{
     position: absolute;
@@ -404,26 +406,36 @@ fieldset {
 .click{
     display: flex;
     align-items: center;
-    background-color: transparent;
     font-size: 3rem;
     border: transparent;
-    color:#d1cfcf;
+    color:#ffffff80;
     cursor: pointer;
     border-radius: 1rem;
     padding: 15px 30px;
+    background: transparent;
+    box-shadow: transparent;
+    border: 1px solid #ffffff80;
+    transition: 0.5s ease;
 }
 
-button:hover {
-    background-image: linear-gradient(90deg, #fff01e 0%, #ce5200 50%, #b42b01 75%, #fff01e 100%);
+.click:hover {
+    background-image: linear-gradient(90deg, #ffdad8 0%, #d2aaff 50%, #008dce 75%, #ffdad8 100%);
     animation: slidernbw 5s linear infinite;
-    color: #000;
+    color: #ffffff;
+    border: none;
+    box-shadow: #1ebfff  0px 7px 29px 0px;
+   }
+
+.click:active{
+    transform: translateY(10px);
+    transition: 100ms;
 }
    
-@keyframes slidernbw {
+   @keyframes slidernbw {
     to {
      background-position: 20vw;
     }
-}
+   }
 
 .moon__img{
     width: 40rem;
@@ -434,7 +446,7 @@ button:hover {
 }
 .moon-title .text{
     position: relative;
-    color: yellow;
+    color: rgb(201, 144, 255);
     font-size: 1.7rem;
     font-weight: 400;
 }
@@ -449,7 +461,7 @@ button:hover {
     height: 100%;
     width: 100%;
     background-color: #000000;
-    border-left: 2px solid yellow;
+    border-left: 2px solid rgb(201, 144, 255);;
     animation: animate 4s steps(12) infinite;
 }
 @keyframes animate{
@@ -465,7 +477,7 @@ button:hover {
 
 /* PLANETS.HTML */
 .hero-section__img{
-    width: calc(var(--index) * 28);
+    width: 40rem;
     position: absolute;
     left: 45vw;
     top: 10vh;
@@ -485,6 +497,7 @@ button:hover {
     color: yellow;
 }
 
+
 .gallery{
     display: flex;
     padding: calc(var(--index) * 30) 0;
@@ -501,7 +514,7 @@ button:hover {
     margin-bottom: var(--gallery-gap);
 }
 
-.gallery__right .gallery-item{
+ .gallery__right .gallery-item{
     margin-bottom: calc(var(--gallery-gap) );
     margin-left: calc(var(--gallery-gap) * 0.2);
 }
@@ -614,12 +627,12 @@ button:hover {
     color: #161616;
     top: -6rem;
     font-size: 2rem;
-}
-.about-moon__item h3{
+  }
+  .about-moon__item h3{
     margin-bottom: 1rem;
-}
+  }
 
-.about-moon__article{
+  .about-moon__article{
     display: flex;
     align-items: flex-start;
     justify-content: center;
@@ -628,16 +641,20 @@ button:hover {
     width: 80%;
     font-size: 1.3rem;
     line-height: 1.5;
-}
-.about-moon__article h3{
+  }
+  .about-moon__article h3{
     margin-top: 10rem;
     margin-bottom: 1rem;
-}
-.about-moon__article-img img{
-    width: 40%;
+  }
+
+  .about-moon__article-img img{
+    width: 25rem;
     float: left;
-    padding-right: 2rem;
-}
+    object-fit: cover;
+    padding: 0 2rem 2rem 0;
+    
+    
+  }
 
 
 @media (max-width: 1330px) {
@@ -666,7 +683,9 @@ button:hover {
 
     fieldset{
         width: 40%;
-    }
+    }
+
+
 }
 
 @media (max-width: 1222px) {
@@ -708,7 +727,6 @@ button:hover {
         max-width: 70%;
     }
 }
-
 @media (max-width: 560px) {
     .gallery-planets{
         max-width: 60%;
