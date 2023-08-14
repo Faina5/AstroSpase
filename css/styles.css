@@ -497,6 +497,10 @@ fieldset {
     color: yellow;
 }
 
+.main-title p{
+    width: 40rem;
+}
+
 
 .gallery{
     display: flex;
@@ -645,6 +649,16 @@ fieldset {
   .about-moon__article h3{
     margin-top: 10rem;
     margin-bottom: 1rem;
+  }
+  .about-moon__article h4{
+    margin-bottom: 1rem;
+  }
+  .about-moon__article p{
+    padding-bottom: 3rem;
+  }
+
+  .about-moon__article iframe{
+    float: left;
   }
 
   .about-moon__article-img img{
