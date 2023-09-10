@@ -740,6 +740,8 @@ fieldset {
     .gallery-planets{
         max-width: 70%;
     }
+    .stars{
+        display: none;
 }
 @media (max-width: 560px) {
     .gallery-planets{
