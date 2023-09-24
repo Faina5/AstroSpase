@@ -27,7 +27,7 @@ h1, h2, h3, h4, h5, h6{
 fieldset {
     border: 1px solid #fffab7;
     padding: var(--index);
-    margin: 4rem;
+    margin: 1rem;
 }
 
 :root {
@@ -99,8 +99,8 @@ body{
 
 .menu__list-link.menu__list-link_here{
     cursor: default;
-    text-decoration: underline 1px #00000057;
-    text-underline-offset: 5px;
+    background-size: 320%;
+    background-position: right center;
 }
 
 .menu__list-link{
@@ -132,7 +132,6 @@ body{
 
 .main{
    flex-grow: 1;
-   overflow: hidden;
 }
 
 .footer{
@@ -219,10 +218,11 @@ body{
     }
 }
 
-.index-SolarSysrem{
+.index-SolarSystem{
     width: 500px;
     position: absolute;
-    top: 10rem;
+    top: 14rem;
+    font-size: 1.2rem;
 }
 
 .list-planets{
@@ -494,8 +494,8 @@ body{
     justify-content: center;
     align-content: space-around;
     justify-items: center;
-    height: 70rem;
     counter-reset: Moon;
+    margin-bottom: 23rem;
 }
 .about-moon__name-title{
     display: flex;
@@ -509,8 +509,11 @@ body{
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    width: 60%;
-    position: relative
+    width: 80%;
+    height: fit-content;
+    margin-top: 7rem;
+    position: relative;
+    font-size: 1.3rem;
 }
 
 .about-moon__item::before{
@@ -537,9 +540,7 @@ body{
     align-items: flex-start;
     justify-content: center;
     flex-direction: column;
-    margin: calc(var(--index)*10) auto;
-    width: 80%;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     line-height: 1.5;
 }
 .about-moon__article h3{
@@ -547,10 +548,10 @@ body{
     margin-bottom: 1rem;
 }
 .about-moon__article h4{
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
 }
 .about-moon__article p{
-    padding-bottom: 3rem;
+    padding-bottom: 1rem;
 }
 
 .about-moon__article iframe{

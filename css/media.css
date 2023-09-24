@@ -31,9 +31,9 @@
         display: none;
     }
 
-    .index-SolarSysrem{
-        width: 100%;
-        top: 5rem;
+    .index-SolarSystem{
+        width: 90%;
+        top: 6rem;
     }
     
     .list-planets{
@@ -53,8 +53,8 @@
     .menu__list-link {
         padding: 0.7rem 0.8rem;
     }
-    .index-SolarSysrem {
-        top: 3rem;
+    .index-SolarSystem {
+        font-size: 1rem;
     }
     .list-planets {
         margin-top: 22rem;
@@ -99,7 +99,12 @@
         height: 90rem;
     }
     .about-moon__name-title{
-        padding-bottom: 6rem;
+        padding-bottom: 0;
+    }
+
+    .about-moon__item{
+        width: 90%;
+        font-size: 1rem;
     }
     
     .about-moon__item::before{
@@ -126,7 +131,7 @@
     }
     .about-moon__article p{
         padding-bottom: 1.5rem;
-        font-size: 0.7rem;
+        font-size: 1rem;
     }
     
     .about-moon__article-img img{
