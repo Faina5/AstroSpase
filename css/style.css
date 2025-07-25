@@ -1,0 +1,561 @@
+html {
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    display: inline-block;
+}
+
+ul, li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+p {
+    margin: 0;
+}
+
+button {
+    cursor: pointer;
+}
+
+section {
+    margin-top: 8.125rem;
+    width: 100%;
+    padding-top: 1.25rem;
+    border-top: .0625rem solid var(--fill-white-10, rgba(241, 241, 241, 0.10));
+}
+
+
+/* Стили цветов */
+:root {
+    --Background-Black: #0F0F0F;
+    --White: #f1f1f1;
+    --white-10: rgba(241, 241, 241, 0.10);;
+    --Fill-Dark-Grey: #181818;
+    --Text-Grey: #ADADAD;
+    --Fill-Dark-grey-2: #272727;
+}
+.grey {
+    color: var(--Text-Grey) !important;
+}
+
+/* Ширина элементов по колонкам */
+.w-1coloumn {
+    width: 25vw;
+}
+.w-2coloumn {
+    width: 50vw;
+}
+.w-3coloumn {
+    width: 70vw;
+}
+
+/* Классы текста */
+h2 {
+    font-family: "Neue Montreal";
+    font-size: 6.875rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+    letter-spacing: -0.1375rem;
+    text-transform: uppercase;
+}
+
+h3 {
+    font-family: "Neue Montreal", sans-serif;
+    font-size: 3.5rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 96%; /* 53.76px */
+    letter-spacing: -0.07rem;
+    text-transform: uppercase;
+}
+
+h5 {
+    font-family: "Neue Montreal", sans-serif;
+    font-size: 1.875rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%; /* 30px */
+    letter-spacing: -0.6px;
+    text-transform: uppercase;
+}
+
+h6 {
+    font-family: "Neue Montreal";
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 110%;
+    letter-spacing: -0.0112rem;
+    text-transform: uppercase;
+}
+
+.twentypx {
+    font-size: 1.25rem;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.text {
+    color: var(--Text-White);
+    font-family: "Neue Montreal", sans-serif;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+    letter-spacing: -0.01rem;
+}
+
+.descriptor {
+    font-family: "Neue Montreal", sans-serif;
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+    letter-spacing: -0.0125rem;
+}
+
+.number {
+    font-family: "Neue Montreal", sans-serif;
+    font-size: 5rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 85%;
+    letter-spacing: -0.1rem;
+}
+
+.space-between {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Блоки и элементы */
+body {
+    background-color: var(--Background-Black);
+    color: var(--White);
+    font-family: 'NeueMontreal-Regular', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 120%;
+    letter-spacing: -2;
+}
+
+.container {
+    max-width: 1600px;
+    padding: 0 2.5rem;
+    margin: 0 auto;
+    overflow-x: hidden;
+}
+
+.header__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 4.0625rem;
+    font-family: 'NeueMontreal-Regular', sans-serif;
+    font-weight: 400;
+    font-size: .9375rem;
+    letter-spacing: -0.0281rem;
+    color: var(--Text-White, #F1F1F1);
+    font-style: normal;
+    line-height: 140%;
+}
+
+.menu-list {
+    display: flex;
+    gap: 4.375rem;
+}
+
+.hero-section {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.hero-image {
+    background: linear-gradient(180deg, #000 0%, #050505 100%);
+    height: 100%;
+    text-align:start;
+    object-fit: cover;
+    position: relative;
+}
+
+.hero-text {
+    background-color: var(--White);
+    color: var(--Background-Black);
+    font-family: "Neue Montreal", sans-serif;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%; /* 28.8px */
+    letter-spacing: -0.015rem;
+    width: 32rem;
+    position: absolute;
+    z-index: 1;
+}
+
+.left {
+    bottom: 2.5rem;
+    left: 2.5rem;
+}
+
+.right {
+    bottom: 2.5rem;
+    right: 2.5rem;
+}
+
+.h2ndot {
+    font-family: "Ndot Caps Cyrillic", sans-serif;
+    font-size: 2.875rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+    letter-spacing: -0.0288rem;
+}
+
+.h3ndot {
+    font-family: 'Ndot Caps Cyrillic', sans-serif;
+    color: var(--Text-White, #F1F1F1);
+    /* 1920-1000px/H3 */
+    font-size: 2rem;
+    line-height: 140%;
+    letter-spacing: -0.02rem;
+    font-style: normal;
+    font-weight: 400;
+}
+
+
+.top-section {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 2.5rem;
+}
+
+.left-content {
+    width: 22.8125rem;
+}
+
+.right-content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+
+.headline-section {
+    display: flex;
+    gap: 1.25rem;
+    flex-direction: column;
+}
+
+.empty{
+    color: var(--Background-Black);
+}
+
+.link-button {
+    align-content:last baseline;
+    display: flex;
+    align-items: center;
+    height: min-content;
+}
+.link-button img {
+    width: .75rem;
+    height: .75rem;
+}
+
+.link-button:hover img {
+    transform: rotate(45deg);
+    transition: .3s ease-in all;
+}
+.link-button:hover a{
+    text-decoration: none;
+}
+.link-button:active {
+    opacity: 0.7;
+}
+
+.link {
+    font-family: "Neue Montreal", sans-serif;
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+    letter-spacing: -0.0112rem;
+    text-decoration-line: underline;
+    text-underline-offset: auto;
+    text-transform: uppercase;
+    padding-right: .625rem;
+}
+
+.numbers-list {
+    padding-top: .625rem;
+    border-top: .0625rem solid var(--fill-white-10, rgba(241, 241, 241, 0.10));
+    display: flex;
+    justify-content: space-between;
+}
+
+.number-item {
+    display: flex;
+    gap: .625rem;
+    align-items: end;
+}
+
+.number-item__description {
+    display: flex;
+    flex-direction: column;
+    gap: .0625rem;
+    color: var(--Text-Grey);
+}
+
+.bestsellers {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.product-card__list {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    align-self: stretch;
+}
+
+.product-card {
+    display: flex;
+    width: 46.875rem;
+    height: 32.5rem;
+    padding: 1.5625rem;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-radius: 1.875rem;
+    background: var(--Fill-Dark-Grey, #181818);
+    position: relative;
+    cursor: pointer;
+}
+
+.video-card {
+    display: flex;
+    aspect-ratio: 16/9;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-radius: 1.875rem;
+    background: var(--Fill-Dark-Grey, #181818);
+    overflow: hidden;
+}
+
+.product-card__image {
+    display: flex;
+    width: 375px;
+    height: 358px;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 0px;
+    top: 81px;
+}
+
+.fill-button {
+    display: flex;
+    padding: .9375rem 0;
+    justify-content:center;
+    align-items: center;
+    align-self: stretch;
+    border-radius: 10rem;
+    background: var(--Fill-White, #F1F1F1);
+    border: 1px solid var(--White);
+    color: var(--Text-Black, #000);
+    font-family: "Neue Montreal", sans-serif;
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+    letter-spacing: -0.0112rem;
+    text-transform: uppercase;
+}
+.fill-button:hover {
+    border: 1px solid transparent;
+    background: var(--Fill-Dark-grey-2);
+    color: var(--White);
+}
+.fill-button:active {
+    border: 1px solid var(--Fill-Grey, #4A4A4A);
+    background: var(--Background-Black, #0F0F0F);
+    color: var(--White);
+}
+
+.text-content {
+    display: flex;
+    gap: 20px;
+}
+
+
+.awards-list img {
+    height: 3rem;
+}
+
+.awards-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5625rem;
+    width: 200%;
+    position: relative;
+}
+
+.awards-list{
+    display: flex;
+    gap: 1.5625rem;
+}
+
+.top-list div{
+    display: flex;
+    gap: 1.5625rem;
+    animation: top-animation 20s linear infinite;
+    white-space: nowrap;
+}
+ 
+@keyframes top-animation {
+    0% {
+        transform: translateZ(0);
+    }
+ 
+    100% {
+        transform: translate3d(-100%, 0, 0);
+    }
+}
+
+.bottom-list div{
+    display: flex;
+    gap: 1.5625rem;
+    animation: bottom-animation 15s linear infinite;
+    white-space: nowrap;
+}
+ 
+@keyframes bottom-animation {
+    0% {
+        transform: translateZ(0);
+    }
+ 
+    100% {
+        transform: translate3d(-100%, 0, 0);
+    }
+}
+
+.bottom-list:hover div{
+    animation: paused;
+}
+.top-list:hover div{
+    animation: paused;
+}
+
+.advantages-cards {
+    display: flex;
+    gap: 1.25rem;
+}
+
+.advantages-card {
+    display: flex;
+    width: 200rem;
+    aspect-ratio: 1/1;
+    padding: 1.5625rem;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    border-radius: 30px;
+    border: 1px solid var(--Fill-Grey, #4A4A4A);
+    background: var(--Background-Black, #0F0F0F);
+}
+
+.advantages-card img {
+    width: 6rem;
+    height: 6rem;
+
+    opacity: 0;
+}
+.advantages-card p {
+    display: none;
+}
+
+.advantages-card__top {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.advantages-card__bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    align-self: stretch;
+}
+
+.advantage-number {
+    display: flex;
+    width: 3.125rem;
+    height: 50px;
+    padding: .625rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1.625rem;
+    border-bottom: 1px solid var(--Text-White, #F1F1F1);
+}
+
+.advantages-card:hover {
+    border: solid var(--Fill-Dark-Grey, #181818);
+    background: var(--Fill-Dark-Grey, #181818);
+    transform: scale(1.2);
+    transition: .5s ease all;
+}
+.advantages-card:hover img {
+    display: block;
+    opacity: 1;
+    transition: .5s ease-in-out;
+}
+.advantages-card:hover .advantage-number {
+    display: none;
+}
+.advantages-card:hover p {
+    display: block;
+}
+
+
+.mounth-item {
+    display: flex;
+    width: 5rem;
+    height: 5rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10rem;
+    /* border-bottom: 1px solid transparent var(--Background-Black); */
+    background: var(--Background-Black);
+}
+
+.mounth-item:hover {
+    border-bottom: 1px solid var(--Fill-White, #F1F1F1);
+    background: var(--Fill-Dark-grey-2, #272727);
+    cursor: pointer;
+}
+
+.mounth-item.active {
+    border-bottom: 1px solid var(--Fill-White, #F1F1F1);
+    background: var(--Fill-Dark-grey-2, #272727);
+}

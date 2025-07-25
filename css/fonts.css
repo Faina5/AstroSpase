@@ -1,0 +1,27 @@
+@font-face {
+    font-family: 'NeueMontreal-Regular', sans-serif;
+    src: url('/fonts/NeueMontreal-Regular.woff') format('woff'),
+         url('/fonts/NeueMontreal-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'NeueNontreal-Medium', sans-serif;
+    src: url('/fonts/NeueMontreal-Medium.woff') format('woff'),
+         url('/fonts/NeueMontreal-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Ndot Caps Cyrillic', sans-serif;
+    src: url('/fonts/Ndot57CapsCyrillic.woff') format('woff'),
+         url('/fonts/Ndot57CapsCyrillic.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
